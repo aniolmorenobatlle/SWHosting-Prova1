@@ -1,61 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SWHosting - Prova Tècnica – Junior Full Stack Web Developer
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Requisits tècnics
 
-## About Laravel
+-   PHP (>= 8.1)
+-   Composer
+-   Node.js (>= 18.x)
+-   NPM
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Instal·lació
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Clonar el repositori
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+git clone https://github.com/aniolmorenobatlle/SWHosting-Prova1
+cd SWHosting-Prova1
+```
 
-## Learning Laravel
+2. Instal·lar les dependències de PHP
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+composer install
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+3. Instal·lar les dependències de Node.js
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+npm install
+```
 
-## Laravel Sponsors
+4. Crear el fitxer d'entorn
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+cp .env.example .env
+```
 
-### Premium Partners
+5. Afegir el token al fitxer `.env`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```env
+TOKEN_API= <token>
+```
 
-## Contributing
+6. Executar el projecte
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+npm run build
+php artisan serve
+```
 
-## Code of Conduct
+7. Accedir al projecte
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Obre el navegador i accedeix a `http://localhost:8000`.
 
-## Security Vulnerabilities
+## Explicació breu d'arquitectura
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+L'arquitectura del projecte es basa en un projecte Laravel amb Livewire i Tailwind CSS. El projecte utitliza peticions a una API de SWHosting per obtenir l'informació dels dominis, tant el preu, com la dispoinibilitat.
+El projecte utilitza Livewire per gestionar la interacció amb l'usuari i actualitzar la interfície d'usuari sense necessitat de recarregar la pàgina. Tailwind CSS s'utilitza per estilitzar els components de la interfície d'usuari.
+Per guardar les dades del carret de compra, s'utilitza la sessió de Laravel. Això permet que les dades es mantinguin disponibles durant la sessió de l'usuari sense necessitat d'emmagatzemar-les a la base de dades.
 
-## License
+## Captures del projecte
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Format escriptori
+
+![Format d'escriptori](Escriptori.png)
+
+### Format mòbil
+
+![Format mòbil](Mobil.png)
+
+## Autor i Contacte
+
+**Nom:** Aniol Moreno Batlle  
+**Correu:** [aniolmoreno@gmail.com](mailto:aniolmoreno@gmail.com)  
+**GitHub:** [https://github.com/aniolmorenobatlle](https://github.com/aniolmorenobatlle)
